@@ -1,0 +1,87 @@
+:root {
+  font-size: 62.5%;
+  --hue: 194;
+  --bg-primary: hsl(240, 5%, 7%);
+  --bg-secondary: hsla(var(--hue), 100%, 63%, 0.13);
+  --bt-primary: hsl(var(--hue), 100%, 63%);
+  --bt-secondary: hsl(var(--hue), 0%, 100%);
+  --fc-primary: hsla(0, 0%, 100%, 1);
+  --ff-primary: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+button svg {
+  /* width: 6.4rem; */
+  height: auto;
+
+  width: clamp(5rem, 10vw, 10rem);
+}
+
+body {
+  display: grid;
+  background-color: var(--bg-primary);
+  font-family: var(--ff-primary);
+  color: var(--fc-primary);
+  font-style: normal;
+  font-weight: 700;
+  /* font-size: 8.8rem;
+  line-height: 10.3rem; */
+  text-transform: uppercase;
+  min-height: 100vh;
+
+  font-size: clamp(6rem, 16vw, 14rem);
+  line-height: clamp(8rem, 16vw, 16rem);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-self: end;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+main #timer {
+  display: flex;
+}
+
+#controls {
+  display: flex;
+  background-color: var(--bg-secondary);
+  border-radius: 9999px;
+  width: min-content;
+  /* padding: 2.2rem 4rem;
+  gap: 3.2rem; */
+
+  padding: clamp(1rem, 3vw, 3rem) clamp(2rem, 10vw, 6rem);
+  gap: clamp(1.5rem, 3.2vw, 4rem);
+}
+
+#controls span {
+  display: inline-flex;
+  height: min-content;
+}
+
+footer {
+  display: flex;
+  align-self: end;
+  justify-self: end;
+  /* padding: 3.2rem; */
+
+  padding: clamp(3.2rem, 5vw, 12rem);
+}
